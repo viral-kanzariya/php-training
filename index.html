@@ -1,29 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GadgetPro</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
 <body>
-    <button onclick="runTimer();">Click To Run Timer</button>
-    <div id="show-timer">
-        Please wait till 
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand logo" href="#"><img src="./images/iphonelogo.png" alt="apple logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">iPhones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Watches</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Speakers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Airpod</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
-<script>
-    function runTimer()
-    {
-        let second = 10;
-        for(var i = second ; i >= 0 ; i--)
-        {
-            setTimeout(() => {
-                document.getElementById('show-timer').innerText += " "+i; 
-           
-            },1000);
-        }
-    
-    }
-</script>
+  </nav>
+</header>
+    <!-- Section Banner -->
+    <Section class="banner-section">
+        <h5 class="section-heading">iPhone Banner</h5>
+        <img src="./images/iphone-banner.jpg" alt="iphone banner"/>
+    </Section>
+
+    <div class="container-fluid text-center main_main_section">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4  col-lg-4  col-xl-3">
+                <div class="sidebar-fixed">
+                    <div class="sidebarComponents" >
+                       <!-- Filter Sorting section -->
+                       <section class="mb-4">
+                        <h6 class="font-weight-bold h5 mb-3">Sort By</h6>
+                        <div class="select-outline position-relative w-100">
+                          <select id="sort" class="mdb-select md-form md-outline sort-by isSelected">
+                            <option value="0">Select</option>
+                            <option value="1" >Best Rating</option>
+                            <option value="2">Price -- Low to High</option>
+                            <option value="3">Price -- High to Low</option>
+                          </select>
+                        </div>
+                      </section> 
+
+                        <!-- Filter Category Section  -->
+                        <section class="mb-4" >
+                          <h6 class="font-weight-bold h5 mb-3">Category</h6>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="all-categories" value="all" name="CategoryRadios">
+                            <label class="form-check-label card-link-secondary" for="all-categories">All Category</label>
+                          </div>
+                          
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="iPhone" value="iphone" name="CategoryRadios">
+                            <label class="form-check-label card-link-secondary" for="iPhone">iPhones</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="Watches" value="watch" name="CategoryRadios">
+                            <label class="form-check-label card-link-secondary" for="Watches">Watches</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="Speaker" value="speaker" name="CategoryRadios">
+                            <label class="form-check-label card-link-secondary" for="Speaker">Speakers</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3 pb-1">
+                            <input type="radio" class="form-check-input isSelected" id="Airpods" value="airpod" name="CategoryRadios">
+                            <label class="form-check-label card-link-secondary" for="Airpods">AirPods</label>
+                          </div>
+                        </section>
+
+                        <!-- Filter Section Price -->
+                        <section class="mb-4">
+                          <h6 class="font-weight-bold h5 mb-3">Price</h6>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="under-200" value="0-200" name="PriceRadios">
+                            <label class="form-check-label card-link-secondary" for="under-200">Under $200</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="200-300" value="200-300" name="PriceRadios">
+                            <label class="form-check-label card-link-secondary" for="200-300">$200 - $300</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="300-400" value="300-400" name="PriceRadios">
+                            <label class="form-check-label card-link-secondary" for="300-400">$300 - $400</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="400-500" value="400-500" name="PriceRadios">
+                            <label class="form-check-label card-link-secondary" for="400-500">$400 - $500</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="500-600" value="500-600" name="PriceRadios">
+                            <label class="form-check-label card-link-secondary" for="500-600">$500 - $600</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="radio" class="form-check-input isSelected" id="600-above" value="600-100000" name="PriceRadios">
+                            <label class="form-check-label card-link-secondary" for="600-above">$600 and Above</label>
+                          </div>
+
+                        </section>
+
+                        <!-- Filter Section: Varient -->
+                        <section class="mb-4 variant-section">
+                          <h6 class="font-weight-bold h5 mb-3">Variant</h6>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="checkbox" class="form-check-input isSelected" id="64GB" name="VariantRadios">
+                            <label class="form-check-label card-link-secondary" for="64GB">64GB ROM</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="checkbox" class="form-check-input isSelected" id="128GB" name="VariantRadios">
+                            <label class="form-check-label card-link-secondary" for="128GB">128GB ROM</label>
+                          </div>
+
+                          <div class="form-check pl-0 mb-3">
+                            <input type="checkbox" class="form-check-input isSelected" id="256GB" name="VariantRadios">
+                            <label class="form-check-label card-link-secondary" for="256GB">256GB ROM</label>
+                          </div>
+
+                        </section>
+                        <!-- End of section: Varient -->
+                    </div>                   
+                </div>
+            </div>
+
+            <!-- Product Section -->
+            <div class="col-12 col-sm-12 col-md-8  col-lg-8  col-xl-9">
+                <div class="dashboard-txt1">
+                  <div>
+                      <form id="search-form" method="POST" >
+                        <div class="form-group col-10 col-sm-12 col-md-8  col-lg-6  col-xl-6">
+                            <input class="form-control" type="search" aria-label="Type something to search" 
+                            placeholder="Search For Products, Brands & Categories">
+                        </div>
+                    </form>
+                  </div>
+                  <div class="row" id="products">
+                    <!-- here all products will be added -->
+                  </div>
+                </div>
+            </div>                       
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="./product.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

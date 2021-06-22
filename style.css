@@ -1,0 +1,121 @@
+:root{
+    --white-color: #fff;
+    --box-shadow-brown:#F0F3F8;
+    --purple: #51279B;
+    --dodger: #829AB1;
+    --light-green: #07f25d;
+    --light-red: #D8000C;
+    --error-background-red: #FFBABA;
+    --black: #000;
+    --light-black:rgba(0,0,0,.2);
+    --brown: #7a7777;
+}
+
+section.mb-4 {
+    text-align: left;
+}
+.sidebar-fixed {
+    top: 0;
+    background: var(--white-color);
+    padding: 30px;
+    overflow: auto;
+    box-shadow: 8px 8px 6px 6px var(--box-shadow-brown);
+    border-radius: 24px;
+    margin-right: 12px;
+    margin-left: 0;
+    height:100vh;
+    position: sticky;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 10px;
+}
+
+nav.navbar.navbar-expand-lg {
+    background-color: black;
+}
+.logo img{
+    height: 50px;
+    padding: 0px 20px;
+}
+nav.navbar.navbar-expand-lg ul li{
+    padding: 0px 20px;
+}
+nav.navbar.navbar-expand-lg ul li a{
+    color: white !important;
+    font-weight: bold;
+}
+@media (min-width: 1024px){
+    div#navbarSupportedContent{
+        margin-left: 18% !important;
+    }
+}
+
+nav.navbar.navbar-expand-lg ul li a:hover{
+    text-decoration-line: underline;
+    color: #07f25d !important;
+    transition: .5s;
+}
+/* header */
+
+.banner-section img {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.product-inner.text-center {
+    padding: 20px;
+    margin: 20px;
+}
+.product-inner {
+    box-shadow: 0 0 10px var(--light-black);
+    padding: 10px;
+}
+.product-inner img{
+    height: 150px;
+}
+.product img {
+    margin-bottom: 10px;
+}
+
+.not-found {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 20% 10% !important;
+    color: var(--light-red);
+    background-color: var(--error-background-red);
+    max-width: 80% !important;
+    padding: 30px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-variant-caps: small-caps;
+}
+.section-heading{
+    display: none;
+}
+.form-group {
+	margin: 20px auto;
+	box-shadow:0 0 9px 4px var(--box-shadow-brown);
+}
+
+.form-group input:focus{
+    outline: none;
+}
+.star{
+    padding: 1px 5px;
+    color: white;
+    background-color: green;
+}
+.star::after{
+    content: '\2605';
+}
