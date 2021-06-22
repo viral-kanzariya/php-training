@@ -4,12 +4,15 @@ $usn = 'root';
 $pswd = 123;
 $db = 'newDB';
 //added new content
+/*
+multiline comment
+*/
 $conn = new mysqli($ser,$usn,$pswd,$db);
 if($conn->connect_error){
     die("connection error: ".$conn->connect_error);
 }
 else{
-    echo 'connected successfully<br>';
+    echo 'connected to newDB  successfully<br>';
 }
 $retrieve = "select firstname,lastname from Cricc where role='batsman' or role='keeper'";//using or
 $result = $conn->query($retrieve);
