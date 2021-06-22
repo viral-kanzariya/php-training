@@ -34,8 +34,12 @@ if($result->num_rows>0){
     while($res = $result->fetch_assoc()){
         echo $res['firstname'].' '.$res['lastname'].'<br>';
     }
+<<<<<<< HEAD
 } da99e079e69956123e1fafa72d33f09296d957ee
 
+=======
+}
+>>>>>>> 3dcec041275a36ea2d4a7ba7a4d868b254848127
 echo "commiting to the git<br>";
 $conn->close();
 ?>
