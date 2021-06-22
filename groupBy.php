@@ -3,6 +3,7 @@ $server = 'localhost';
 $usn = 'root';
 $pswd = '123';
 $db = 'newDB';
+//connecting to the db
 $conn = new mysqli($server,$usn,$pswd,$db);
 if($conn->connect_error){
     die("connection error: ".$conn->connect_error);
@@ -20,6 +21,7 @@ if($result->num_rows>0){
         echo $res['num'].' and  '.$res['role'].'<br>';
     }
 }
+//closing the connection
 $conn->close();
 ?>
 
