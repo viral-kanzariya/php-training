@@ -1,8 +1,8 @@
 <?php
 return [
     'modules' => [
-        'Magento_AdminAnalytics' => 1,
-        'Magento_Store' => 1,
+        'Magento_AdminAnalytics' => 0,
+        'Magento_Store' => 0,
         'Magento_AdminGwsConfigurableProduct' => 1,
         'Magento_AdminGwsStaging' => 1,
         'Magento_Directory' => 1,
