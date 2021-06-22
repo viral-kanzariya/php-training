@@ -3,6 +3,7 @@ $ser = 'localhost';
 $usn = 'root';
 $pswd = 123;
 $db = 'newDB';
+//added new content
 $conn = new mysqli($ser,$usn,$pswd,$db);
 if($conn->connect_error){
     die("connection error: ".$conn->connect_error);
