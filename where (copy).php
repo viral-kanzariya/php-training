@@ -7,6 +7,8 @@ $db = 'newDB';
 /*
 multiline comment
 */
+echo "okay <br>";
+echo "ibu<br>";
 $conn = new mysqli($ser,$usn,$pswd,$db);
 if($conn->connect_error){
     die("connection error: ".$conn->connect_error);
@@ -37,5 +39,6 @@ if($result->num_rows>0){
         echo $res['firstname'].' '.$res['lastname'].'<br>';
     }
 }
+echo "commiting to the git<br>";
 $conn->close();
 ?>
