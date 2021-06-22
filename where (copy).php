@@ -37,5 +37,6 @@ if($result->num_rows>0){
         echo $res['firstname'].' '.$res['lastname'].'<br>';
     }
 }
+echo "commiting to the git<br>";
 $conn->close();
 ?>
