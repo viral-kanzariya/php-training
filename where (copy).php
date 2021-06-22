@@ -3,10 +3,6 @@ $ser = 'localhost';
 $usn = 'root';
 $pswd = 123;
 $db = 'newDB';
-//added new content
-/*
-multiline comment
-*/
 echo "okay <br>";
 echo "ibu<br>";
 $conn = new mysqli($ser,$usn,$pswd,$db);
@@ -38,7 +34,8 @@ if($result->num_rows>0){
     while($res = $result->fetch_assoc()){
         echo $res['firstname'].' '.$res['lastname'].'<br>';
     }
-}
+} da99e079e69956123e1fafa72d33f09296d957ee
+
 echo "commiting to the git<br>";
 $conn->close();
 ?>
